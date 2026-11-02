@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:shortcutId="inbox" android:enabled="true" android:icon="@mipmap/ic_launcher" android:shortcutShortLabel="@string/sc_inbox">
+        <intent android:action="android.intent.action.VIEW" android:targetPackage="com.venusflydubz.hq" android:targetClass="com.venusflydubz.hq.MainActivity" android:data="https://venusflydubz.com/dashboard#inbox" />
+    </shortcut>
+    <shortcut android:shortcutId="calendar" android:enabled="true" android:icon="@mipmap/ic_launcher" android:shortcutShortLabel="@string/sc_calendar">
+        <intent android:action="android.intent.action.VIEW" android:targetPackage="com.venusflydubz.hq" android:targetClass="com.venusflydubz.hq.MainActivity" android:data="https://venusflydubz.com/dashboard#calendar" />
+    </shortcut>
+    <shortcut android:shortcutId="income" android:enabled="true" android:icon="@mipmap/ic_launcher" android:shortcutShortLabel="@string/sc_income">
+        <intent android:action="android.intent.action.VIEW" android:targetPackage="com.venusflydubz.hq" android:targetClass="com.venusflydubz.hq.MainActivity" android:data="https://venusflydubz.com/dashboard#income" />
+    </shortcut>
+    <shortcut android:shortcutId="ask" android:enabled="true" android:icon="@mipmap/ic_launcher" android:shortcutShortLabel="@string/sc_ask">
+        <intent android:action="android.intent.action.VIEW" android:targetPackage="com.venusflydubz.hq" android:targetClass="com.venusflydubz.hq.MainActivity" android:data="https://venusflydubz.com/dashboard#ask" />
+    </shortcut>
+</shortcuts>

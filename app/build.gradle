@@ -1,0 +1,40 @@
+plugins { id "com.android.application" }
+
+def ks = System.getenv("VF_KEYSTORE_FILE")
+
+android {
+    namespace "com.venusflydubz.hq"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.venusflydubz.hq"
+        minSdk 29
+        targetSdk 34
+        versionCode((System.getenv("VF_VERSION_CODE") ?: "1") as int)
+        versionName "1.0." + (System.getenv("VF_VERSION_CODE") ?: "1")
+    }
+
+    signingConfigs {
+        release {
+            if (ks) {
+                storeFile file(ks)
+                storePassword System.getenv("VF_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("VF_KEY_ALIAS")
+                keyPassword System.getenv("VF_KEY_PASSWORD")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig ks ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    lint { abortOnError false; checkReleaseBuilds false }
+}
