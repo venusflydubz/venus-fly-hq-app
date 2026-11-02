@@ -14,6 +14,6 @@ Every push to `main` builds and signs the APK with GitHub Actions and attaches i
 new release. Open **Releases** on your phone, tap the newest `.apk`, and allow installs
 from your browser if Android asks.
 
-Signing uses the repository secrets `VF_KEYSTORE_B64`, `VF_KEYSTORE_PASSWORD`,
+Release builds are signed with the permanent key from the repository secrets `VF_KEYSTORE_B64`, `VF_KEYSTORE_PASSWORD`,
 `VF_KEY_ALIAS` and `VF_KEY_PASSWORD`. Keep the same key, or Android will refuse to
 install updates over the old app.
